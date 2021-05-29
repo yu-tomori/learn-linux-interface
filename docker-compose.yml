@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  linux:
+    build:
+      context: ./container
+    volumes:
+      - ./container/src/:/root/src/
+    container_name: linux-container
