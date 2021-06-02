@@ -27,7 +27,8 @@ terminate(Boolean useExit3)
 }
 
 static void
-outputError(Boolean useErr, int err, Boolean flushStdout)
+outputError(Boolean useErr, int err, Boolean flushStdout,
+    const char *format, va_list ap)
 {
 #define BUF_SIZE 500
   char buf[BUF_SIZE], userMsg[BUF_SIZE], errText[BUF_SIZE];
